@@ -1,0 +1,111 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu {
+    @include gradient;
+}
+
+.navbar-brand {
+    float: left;
+    padding-left: 5%;
+
+    .logo2 {
+        display: none;
+    }
+
+    .logo:hover .logo1 {
+        display: none;
+    }
+
+    .logo:hover .logo2 {
+        display: block;
+    }
+}
+
+nav {
+    margin: 25px 25px auto auto;
+    background-color: $primary;
+    border-radius: 8px;
+    font-size: 0;
+
+    .navbar-dropdown {
+        display: none;
+        width: 320px;
+        width: 25%;
+    }
+
+    .navbar-menu {
+        width: 60px;
+        display: contents;
+    }
+
+    input {
+        display: none;
+    }
+
+    #navbar-exp:checked + label {
+        .navbar-dropdown {
+            display: contents;
+            text-align: center;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+}
+
+nav a {
+    line-height: 35px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $gray-200;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+a:nth-child(2) {
+    width: 100px;
+}
+a:nth-child(3) {
+    width: 100px;
+}
+
+nav .start-about, a:nth-child(1):hover~.animation {
+    width: 100px;
+    height: 35px;
+    top: 33px;
+    right: 225px;
+    background-color: #c4a4ff;
+}
+nav .start-projects, a:nth-child(2):hover~.animation {
+    width: 100px;
+    height: 35px;
+    top: 33px;
+    right: 125px;
+    background-color: #c4a4ff;
+}
+nav .start-contact, a:nth-child(3):hover~.animation {
+    width: 100px;
+    height: 35px;
+    top: 33px;
+    right: 25px;
+    background-color: #c4a4ff;
+}

@@ -1,0 +1,93 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#home {
+    @include gradient;
+    padding: 7rem 0 0 0;
+    width: 100%;
+    height: 60%;
+
+    @media (max-height: 750px) {
+        height: 100%;
+    }        
+}
+
+.intros {
+    .project-box {
+        position: relative;
+        
+        img {
+            @media (max-height: 1000px) {
+                height: 40%;
+            }
+        }
+
+        .intro-projects {
+            @include absoluteCenter;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            font-weight: 450;
+            font-size: 23px;
+            color: $gray-600;
+            background: linear-gradient(to right, transparent, 10%, #d7c1ffbd, 70%, transparent);
+            padding: 0.25rem;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 18px;
+            }
+        }
+
+        a {
+            span {
+                // double right chevron
+                svg {
+                    position: relative;
+                    font-size: 5rem;
+                    background-color: $gray-400;
+                    border-radius: 50%;
+                    opacity: 0.75;
+                    padding: 0.5rem;
+                    transform: translate(-50%, 60%);
+
+                    @include media-breakpoint-down(lg) {
+                        transform: translate(50%, -50%);
+                        width: 50%;
+                        height: 50%;
+                    }
+                }
+            }
+
+            &:hover {
+                .border-animation {
+                    position: absolute;
+                    top: 50px;
+                    left: -40px;
+                    width: 6rem;
+                    height: 6rem;
+                    border: 0.3rem solid $gray-200;
+                    border-radius: 50%;
+                    animation: pulse-border 1.5s linear infinite;
+                    
+                    &--border-2 {
+                        animation-delay: .5s;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        top: -25px;
+                        left: 75px;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        padding-top: 30px;
+    }
+}

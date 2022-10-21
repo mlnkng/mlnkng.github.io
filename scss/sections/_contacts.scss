@@ -1,0 +1,21 @@
+.contacts {
+    padding: 0 0 5rem 0;
+
+    &__links-box {
+        max-width: 100%;
+        height: 3rem;
+        margin-bottom: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        position: relative;
+
+        img {
+            height: 100%;
+
+            &:hover {
+                height: 120%;
+                opacity: 75%;
+            }
+        }
+    }
+}
