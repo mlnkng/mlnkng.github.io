@@ -10935,26 +10935,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@-webkit-keyframes pulse-border {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-@keyframes pulse-border {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
 .btn-rounded {
   position: relative;
   padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
@@ -10990,7 +10970,6 @@ textarea.form-control-lg {
 
 .display-2 {
   margin-bottom: 1rem;
-  text-transform: lowercase;
   font-family: "Ubuntu", sans-serif;
 }
 .display-2--intro {
@@ -11083,73 +11062,27 @@ textarea.form-control-lg {
   }
 }
 
-.intros .project-box {
+.intros .image-box {
   position: relative;
 }
-@media (max-height: 1000px) {
-  .intros .project-box img {
-    height: 40%;
-  }
-}
-.intros .project-box .intro-projects {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  transform: translate(-50%, -50%);
-  font-weight: 450;
-  font-size: 23px;
-  color: #6c757d;
-  background: linear-gradient(to right, transparent, 10%, rgba(215, 193, 255, 0.7411764706), 70%, transparent);
-  padding: 0.25rem;
+.intros .image-box .image-cartoon {
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+  filter: grayscale(0.4);
 }
 @media (max-width: 991.98px) {
-  .intros .project-box .intro-projects {
-    font-size: 18px;
+  .intros .image-box .image-cartoon {
+    width: 80%;
+    height: 80%;
+    margin-top: 50px;
   }
 }
-.intros .project-box a span svg {
-  position: relative;
-  font-size: 5rem;
-  background-color: #ced4da;
-  border-radius: 50%;
-  opacity: 0.75;
-  padding: 0.5rem;
-  transform: translate(-50%, 60%);
-}
-@media (max-width: 991.98px) {
-  .intros .project-box a span svg {
-    transform: translate(50%, -50%);
-    width: 50%;
-    height: 50%;
-  }
-}
-.intros .project-box a:hover .border-animation {
-  position: absolute;
-  top: 50px;
-  left: -40px;
-  width: 6rem;
-  height: 6rem;
-  border: 0.3rem solid #e9ecef;
-  border-radius: 50%;
-  -webkit-animation: pulse-border 1.5s linear infinite;
-          animation: pulse-border 1.5s linear infinite;
-}
-.intros .project-box a:hover .border-animation--border-2 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-@media (max-width: 991.98px) {
-  .intros .project-box a:hover .border-animation {
-    top: -25px;
-    left: 75px;
-    width: 3rem;
-    height: 3rem;
-  }
+.intros .image-box .image-norm {
+  display: none;
 }
 @media (max-width: 767.98px) {
-  .intros .project-box {
+  .intros .image-box {
     display: none;
   }
 }
@@ -11191,16 +11124,6 @@ nav .navbar-dropdown {
 nav .navbar-menu {
   width: 60px;
   display: contents;
-}
-nav input {
-  display: none;
-}
-nav #navbar-exp:checked + label .navbar-dropdown {
-  display: contents;
-  text-align: center;
-}
-nav #navbar-exp:checked + label svg {
-  display: none;
 }
 
 nav a {
@@ -11293,7 +11216,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
   box-shadow: 0px 2px 10px rgba(97, 97, 97, 0.24);
   border: 2px solid rgba(114, 114, 114, 0.12);
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   position: relative;
   display: flex;
   justify-content: center;
@@ -11326,7 +11249,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
 .card:hover .icon {
   width: 40px;
   height: 40px;
-  transition: all 0.2s ease;
+  transition: all 1s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11376,7 +11299,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
   justify-content: center;
   align-items: center;
   color: white;
-  transition: all 0.8s ease;
+  transition: all 1s ease;
   background-position: 0px;
   background-size: 200px;
 }
