@@ -2,38 +2,95 @@
 @use '../components/mixins' as *;
 
 .btn-rounded {
+    // position: relative;
+    // padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+    // font-weight: 700;
+    // font-family: 'Ubuntu', sans-serif;
+    // margin: 0;
+    // border: 0.1rem solid rgba($white, 0.6);
+    // background-color: $white;
+    // display: block;
+
+    // span {
+    //     position: absolute;
+    //     background-color: $primary;
+    //     width: 2.5rem;
+    //     height: 2.5rem;
+    //     top: 50%;
+    //     right: 7px;
+    //     transform: translateY(-50%);
+    //     border-radius: 50%;
+
+    //     svg {
+    //         transform: translate(0%, 40%);
+    //         width: 1.5rem;
+    //         height: 1.5rem;        
+    //     }
+    // }
+
+    // &:hover {
+    //     @include gradient;
+    //     color: $white;
+
+    //     span {
+    //         background-color: #ffc2ff;
+    //     }
+    // }
+
+    width: 280px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     position: relative;
-    padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
-    font-weight: 700;
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0;
-    border: 0.1rem solid rgba($white, 0.6);
-    background-color: $white;
-    display: block;
+    cursor: pointer;
 
     span {
+        @include gradient-rev;
         position: absolute;
-        background-color: $primary;
-        width: 2.5rem;
-        height: 2.5rem;
-        top: 50%;
-        right: 7px;
-        transform: translateY(-50%);
-        border-radius: 50%;
+        width: 100%;
+        text-align: center;
+        line-height: 80px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        transition: 0.6s linear;
 
         svg {
-            transform: translate(0%, 40%);
-            width: 1.5rem;
-            height: 1.5rem;        
+            margin-left: 50px;
         }
     }
 
+    a {
+        flex: 1;
+        font-size: 26px;
+        text-align: center;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 0.3s linear;
+        color: $gray-200;
+    }
+
+    a:nth-of-type(1) {
+        transition-delay: 0.6s;
+    }    
+    a:nth-of-type(2) {
+        transition-delay: 0.4s;
+    }
+    a:nth-of-type(3) {
+        transition-delay: 0.2s;
+    }
+
     &:hover {
-        @include gradient;
-        color: $white;
+        transform: scale(1.1);
 
         span {
-            background-color: #ffc2ff;
+            transform: translateX(-100%);
+        }
+
+        a {
+            opacity: 1;
+            transform: translateX(0);
         }
     }
 }

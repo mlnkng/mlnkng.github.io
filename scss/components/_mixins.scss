@@ -5,6 +5,10 @@
     background: linear-gradient(to right, rgba(#a690ff, 0.95), rgba(#ffd0ff, 0.95));
 }
 
+@mixin gradient-rev {
+    background: linear-gradient(to right, rgba(#ffd0ff, 0.95), rgba(#a690ff, 0.95));
+}
+
 // Absolute center
 @mixin absoluteCenter {
     position: absolute;

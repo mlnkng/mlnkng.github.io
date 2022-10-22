@@ -10772,36 +10772,55 @@ textarea.form-control-lg {
   }
 }
 .btn-rounded {
+  width: 280px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   position: relative;
-  padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
-  font-weight: 700;
-  font-family: "Ubuntu", sans-serif;
-  margin: 0;
-  border: 0.1rem solid rgba(255, 255, 255, 0.6);
-  background-color: #fff;
-  display: block;
+  cursor: pointer;
 }
 .btn-rounded span {
+  background: linear-gradient(to right, rgba(255, 208, 255, 0.95), rgba(166, 144, 255, 0.95));
   position: absolute;
-  background-color: #af9aff;
-  width: 2.5rem;
-  height: 2.5rem;
-  top: 50%;
-  right: 7px;
-  transform: translateY(-50%);
-  border-radius: 50%;
+  width: 100%;
+  text-align: center;
+  line-height: 80px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: 0.6s linear;
 }
 .btn-rounded span svg {
-  transform: translate(0%, 40%);
-  width: 1.5rem;
-  height: 1.5rem;
+  margin-left: 50px;
+}
+.btn-rounded a {
+  flex: 1;
+  font-size: 26px;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s linear;
+  color: #e9ecef;
+}
+.btn-rounded a:nth-of-type(1) {
+  transition-delay: 0.6s;
+}
+.btn-rounded a:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+.btn-rounded a:nth-of-type(3) {
+  transition-delay: 0.2s;
 }
 .btn-rounded:hover {
-  background: linear-gradient(to right, rgba(166, 144, 255, 0.95), rgba(255, 208, 255, 0.95));
-  color: #fff;
+  transform: scale(1.1);
 }
 .btn-rounded:hover span {
-  background-color: #ffc2ff;
+  transform: translateX(-100%);
+}
+.btn-rounded:hover a {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .display-2 {
@@ -10996,7 +11015,7 @@ nav .start-about, a:nth-child(1):hover ~ .animation {
   width: 100px;
   height: 35px;
   top: 33px;
-  right: 225px;
+  right: 300px;
   background-color: #c4a4ff;
 }
 
@@ -11004,7 +11023,7 @@ nav .start-projects, a:nth-child(2):hover ~ .animation {
   width: 100px;
   height: 35px;
   top: 33px;
-  right: 125px;
+  right: 200px;
   background-color: #c4a4ff;
 }
 
@@ -11012,7 +11031,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
   width: 100px;
   height: 35px;
   top: 33px;
-  right: 25px;
+  right: 100px;
   background-color: #c4a4ff;
 }
 
