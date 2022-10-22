@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass scss:assets/css"
+    "compile:sass": "sass --watch --update scss:assets/css"
   },
   "keywords": [
     "sass",
