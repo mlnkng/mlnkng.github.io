@@ -38,21 +38,6 @@ nav {
         width: 60px;
         display: contents;
     }
-
-    input {
-        display: none;
-    }
-
-    #navbar-exp:checked + label {
-        .navbar-dropdown {
-            display: contents;
-            text-align: center;
-        }
-
-        svg {
-            display: none;
-        }
-    }
 }
 
 nav a {

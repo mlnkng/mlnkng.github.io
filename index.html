@@ -22,25 +22,46 @@
       <nav>     
         <!-- <div class="navbar-dropdown">
         </div>    -->
-        <div class="navbar-menu justify-content-end navbar">
-          <input type="checkbox" id="navbar-exp">
-            <label for="navbar-exp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e9ecef" class="bi bi-list" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-                <div class="navbar-dropdown justify-content-end navbar">
-                  <a href=""# >about</a>        
-                  <a href=""# >projects</a>      
-                  <a href=""# >contact</a>        
-                  <div class="animation start-home"></div>
-                </div>
-            </label>
+        <div class="navbar-menu justify-content-end navbar" onclick="showNav();">
+          <div id="nav-icon" class="nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e9ecef" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </div>
+          <div id="nav-dropdown" class="navbar-dropdown justify-content-end navbar">
+            <a href=""# >about</a>        
+            <a href=""# >projects</a>      
+            <a href=""# >contact</a>        
+            <div class="animation start-home"></div>
+          </div>
         </div>
+
+        <script>          
+          function showNav() {
+            var iconDisplay = window.getComputedStyle(document.getElementById('nav-icon')).getPropertyValue('display');
+            var dropdownDisplay = window.getComputedStyle(document.getElementById('nav-dropdown')).getPropertyValue('display');
+
+            if (iconDisplay == "block" && dropdownDisplay == "none") {
+              document.getElementById('nav-icon').style.display = "none";
+              document.getElementById('nav-dropdown').style.display = "contents";
+            }
+          }
+
+          function hideNav() {
+            var iconDisplay = window.getComputedStyle(document.getElementById('nav-icon')).getPropertyValue('display');
+            var dropdownDisplay = window.getComputedStyle(document.getElementById('nav-dropdown')).getPropertyValue('display');
+
+            if (iconDisplay == "none" && dropdownDisplay == "contents") {
+              document.getElementById('nav-icon').style.display = "block";
+              document.getElementById('nav-dropdown').style.display = "none";
+            }
+          }
+        </script>
       </nav>
     </div>
 
     <!-- Intro -->
-    <section id="home" class="intro">
+    <section id="home" class="intro" onclick="hideNav();">
       <div class="container">
         <div class="row align-items-center text-white">
           <!-- intro content -->
