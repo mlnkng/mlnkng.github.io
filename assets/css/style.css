@@ -10867,7 +10867,6 @@ textarea.form-control-lg {
   color: #f8f9fa;
   padding: 15px;
   text-align: center;
-  text-transform: lowercase;
 }
 .text b {
   color: #adb5bd;
@@ -10886,83 +10885,35 @@ textarea.form-control-lg {
   }
 }
 
-#home {
+#intro {
   background: linear-gradient(to right, rgba(166, 144, 255, 0.95), rgba(255, 208, 255, 0.95));
-  padding: 7rem 0 0 0;
+  padding: 10rem 5rem 4rem 5rem;
   width: 100%;
-  height: 60%;
+  max-height: 600px;
 }
-@media (max-height: 750px) {
-  #home {
+@media (max-width: 767.98px) {
+  #intro {
     height: 100%;
   }
 }
 
-.intros .project-box {
-  position: relative;
+.intros .image-box {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
+  width: 300px;
+  height: 300px;
+  background-image: url("../../images/arts/me-cartoon.png");
+  filter: blur(1px);
+  background-size: contain;
 }
-@media (max-height: 1000px) {
-  .intros .project-box img {
-    height: 40%;
-  }
-}
-.intros .project-box .intro-projects {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  transform: translate(-50%, -50%);
-  font-weight: 450;
-  font-size: 23px;
-  color: #6c757d;
-  background: linear-gradient(to right, transparent, 10%, rgba(215, 193, 255, 0.7411764706), 70%, transparent);
-  padding: 0.25rem;
-}
-@media (max-width: 991.98px) {
-  .intros .project-box .intro-projects {
-    font-size: 18px;
-  }
-}
-.intros .project-box a span svg {
-  position: relative;
-  font-size: 5rem;
-  background-color: #ced4da;
-  border-radius: 50%;
-  opacity: 0.75;
-  padding: 0.5rem;
-  transform: translate(-50%, 60%);
-}
-@media (max-width: 991.98px) {
-  .intros .project-box a span svg {
-    transform: translate(50%, -50%);
-    width: 50%;
-    height: 50%;
-  }
-}
-.intros .project-box a:hover .border-animation {
-  position: absolute;
-  top: 50px;
-  left: -40px;
-  width: 6rem;
-  height: 6rem;
-  border: 0.3rem solid #e9ecef;
-  border-radius: 50%;
-  animation: pulse-border 1.5s linear infinite;
-}
-.intros .project-box a:hover .border-animation--border-2 {
-  animation-delay: 0.5s;
-}
-@media (max-width: 991.98px) {
-  .intros .project-box a:hover .border-animation {
-    top: -25px;
-    left: 75px;
-    width: 3rem;
-    height: 3rem;
-  }
+.intros .image-box:hover {
+  background-image: url("../../images/arts/me-normal.png");
+  filter: none;
+  transition: 0.5s;
 }
 @media (max-width: 767.98px) {
-  .intros .project-box {
+  .intros .image-box {
     display: none;
   }
 }
@@ -10991,7 +10942,7 @@ textarea.form-control-lg {
 }
 
 nav {
-  margin: 25px 25px auto auto;
+  margin: 25px 100px auto auto;
   background-color: #af9aff;
   border-radius: 8px;
   font-size: 0;

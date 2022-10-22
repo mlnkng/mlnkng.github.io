@@ -11031,7 +11031,6 @@ textarea.form-control-lg {
   color: #f8f9fa;
   padding: 15px;
   text-align: center;
-  text-transform: lowercase;
 }
 .text b {
   color: #adb5bd;
@@ -11050,36 +11049,53 @@ textarea.form-control-lg {
   }
 }
 
-#home {
+#intro {
   background: linear-gradient(to right, rgba(166, 144, 255, 0.95), rgba(255, 208, 255, 0.95));
   padding: 7rem 0 0 0;
   width: 100%;
-  height: 60%;
+  max-height: 600px;
 }
 @media (max-height: 750px) {
-  #home {
+  #intro {
     height: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  #intro {
+    height: 375px;
   }
 }
 
 .intros .image-box {
-  position: relative;
+  padding: 30px;
+  width: 400px;
+  height: 400px;
 }
-.intros .image-box .image-cartoon {
-  width: 500px;
-  height: 500px;
-  margin-top: 30px;
-  filter: grayscale(0.4);
+.intros .image-box img.me-cartoon {
+  filter: grayscale(40%);
+  width: 350px;
 }
 @media (max-width: 991.98px) {
-  .intros .image-box .image-cartoon {
-    width: 80%;
-    height: 80%;
-    margin-top: 50px;
+  .intros .image-box img.me-cartoon {
+    width: 300px;
   }
 }
-.intros .image-box .image-norm {
-  display: none;
+.intros .image-box img.me-normal {
+  width: 350px;
+  position: absolute;
+  right: 30;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+@media (max-width: 991.98px) {
+  .intros .image-box img.me-normal {
+    width: 300px;
+  }
+}
+.intros .image-box:hover img.me-normal {
+  opacity: 1;
 }
 @media (max-width: 767.98px) {
   .intros .image-box {
