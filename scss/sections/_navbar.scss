@@ -77,20 +77,20 @@ nav .start-about, a:nth-child(1):hover~.animation {
     width: 100px;
     height: 35px;
     top: 33px;
-    right: 225px;
-    background-color: #c4a4ff;
+    right: 300px;
+    background-color: $purple-hover;
 }
 nav .start-projects, a:nth-child(2):hover~.animation {
     width: 100px;
     height: 35px;
     top: 33px;
-    right: 125px;
-    background-color: #c4a4ff;
+    right: 200px;
+    background-color: $purple-hover;
 }
 nav .start-contact, a:nth-child(3):hover~.animation {
     width: 100px;
     height: 35px;
     top: 33px;
-    right: 25px;
-    background-color: #c4a4ff;
+    right: 100px;
+    background-color: $purple-hover;
 }
