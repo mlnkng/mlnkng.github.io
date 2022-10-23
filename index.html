@@ -3,16 +3,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>bootstrap 5 portfolio</title>
+    <title>m.</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
     <!-- Logo -->
     <div class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <div class="logo">
           <img src="images/logo-hot.png" alt="logo image" class="logo1" style="height: 75px; width: 75px;">
           <img src="images/logo-cold.png" alt="logo image" class="logo2" style="height: 75px; width: 75px;">
@@ -20,49 +22,25 @@
       </a>
       
       <!-- Nav Bar -->
-      <nav>     
-        <!-- <div class="navbar-dropdown">
-        </div>    -->
-        <div class="navbar-menu justify-content-end navbar" onclick="showNav();">
+      <nav onmouseleave="hideNav()">
+        <div class="navbar-menu justify-content-end navbar" onclick="showNav()">
           <div id="nav-icon" class="nav-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e9ecef" class="bi bi-list" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
           </div>
           <div id="nav-dropdown" class="navbar-dropdown justify-content-end navbar">
-            <a href=""# >about</a>        
-            <a href=""# >projects</a>      
-            <a href=""# >contact</a>        
+            <a href="#intro" onmouseover="showContacts()" onmouseout="hideContacts()">contact</a>   
+            <a href="#contact-btn" onclick="showAbout('about')" onmouseout="hideAbout('about')">about</a>        
+            <a href="#projects">projects</a>     
             <div class="animation start-home"></div>
           </div>
         </div>
-
-        <script>          
-          function showNav() {
-            var iconDisplay = window.getComputedStyle(document.getElementById('nav-icon')).getPropertyValue('display');
-            var dropdownDisplay = window.getComputedStyle(document.getElementById('nav-dropdown')).getPropertyValue('display');
-
-            if (iconDisplay == "block" && dropdownDisplay == "none") {
-              document.getElementById('nav-icon').style.display = "none";
-              document.getElementById('nav-dropdown').style.display = "contents";
-            }
-          }
-
-          function hideNav() {
-            var iconDisplay = window.getComputedStyle(document.getElementById('nav-icon')).getPropertyValue('display');
-            var dropdownDisplay = window.getComputedStyle(document.getElementById('nav-dropdown')).getPropertyValue('display');
-
-            if (iconDisplay == "none" && dropdownDisplay == "contents") {
-              document.getElementById('nav-icon').style.display = "block";
-              document.getElementById('nav-dropdown').style.display = "none";
-            }
-          }
-        </script>
       </nav>
     </div>
 
     <!-- Intro -->
-    <section id="intro" class="intro" onclick="hideNav();">
+    <section id="intro" class="intro">
       <div class="container">
         <div class="row align-items-center text-white">
           <!-- intro content -->
@@ -73,17 +51,11 @@
                 I'm a new developer based in Vancouver, BC. I hope to have a future in building websites, applications, and everything in between.
               </span>
             </h1>
-            <div class="rounded-pill btn-rounded">
-              <span>come say hi !
-                <!-- chat heart -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="#ffffff" class="bi bi-chat-square-heart" viewBox="0 0 16 16">
-                  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12ZM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Z"/>
-                  <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
-                </svg>
-              </span>
-                <a href="https://github.com/mlnkng"><i class="fab fa-github"></i></a>              
-                <a href="https://www.linkedin.com/in/mlnkng/"><i class="fab fa-linkedin"></i></a>              
-                <a href="https://www.facebook.com/mlnkng/"><i class="fab fa-facebook"></i></a>                
+            <div id="contact-btn" class="rounded-pill btn-rounded" onmouseover="showContacts()" onmouseout="hideContacts()">
+              <span id="contact-span">come say hi !<i class="bi bi-chat-square-heart"></i></span>
+                <a id="contact-link-gh" class="contact-links" href="https://github.com/mlnkng"><i class="fab fa-github"></i></a>              
+                <a id="contact-link-li" class="contact-links" href="https://www.linkedin.com/in/mlnkng/"><i class="fab fa-linkedin"></i></a>              
+                <a id="contact-link-fb" class="contact-links" href="https://www.facebook.com/mlnkng/"><i class="fab fa-facebook"></i></a>                
             </div> 
           </div>
           <!-- image content -->
@@ -107,135 +79,136 @@
         </div>
       </div>
     
-      <!-- Cards -->
+      <!-- cards -->
       <div class="cards">
-        <!-- card 1 -->
-        <div class="card">
-          <div class="icon">
-            <i class="bi bi-info-square">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#d7c1ff" class="bi bi-info-square" viewBox="0 0 16 16">
-              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-              </svg>
-            </i>
+        <!-- about -->
+        <div id="about-card" class="card" onmouseover="showAbout('about')" onmouseout="hideAbout('about')">
+          <div id="about-icon">
+            <i class="bi bi-info-square"></i>
           </div>
-          <p class="title">About Me</p>
-          <p class="text">
+          <p id="about-title" class="title">About Me</p>
+          <p id="about-text" class="text">
             I am a new developer based in <b>Vancouver, BC</b> with a future in building websites, applications, and everything in between. 
             I graduated from <b>Douglas College's Computing System & Information Systems</b> in August 2022 and have strong interest in excelling 
             in <b>Web Development</b> first, and then make my way through the different types of developers throughout my career.
           </p>
         </div>
     
-        <!-- card 2 -->
-        <div class="card">
-          <div class="icon">
-            <i class="bi bi-code-slash">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#d7c1ff" class="bi bi-code-slash" viewBox="0 0 16 16">
-                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
-              </svg>
-            </i>
+        <!-- technologies -->
+        <div id="tech-card" class="card" onmouseover="showAbout('tech')" onmouseout="hideAbout('tech')">
+          <div id="tech-icon">
+            <i class="bi bi-code-slash"></i>
           </div>
-          <p class="title">Technologies</p>        
-          <span class="tech">Technologies I have worked with:</span>
-          <ul>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              HTML/CSS
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              Bootstrap
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              React.js
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              Node.js
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              Java
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              Python
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              Go
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              Ubuntu
-            </li>
+          <p id="tech-title" class="title">Technologies</p>        
+          <span id="tech-text">Technologies I have worked with:</span>
+          <ul id="tech-ul">
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>HTML/CSS/JS</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Bootstrap</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>React.js</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Node.js</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Java</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Python</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Go</li>
+            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Ubuntu</li>
           </ul>
         </div>
       </div>
-      <div class="cards">       
-        <!-- card 3 -->
-        <div class="card">
-          <div class="icon">
-            <i class="bi bi-info-square">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#d7c1ff" class="bi bi-info-square" viewBox="0 0 16 16">
-              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-              </svg>
-            </i>
+      <div class="cards card3">       
+        <!-- experiences -->
+        <div class="card-exp" onmouseleave="hideExp()">
+          <div class="icons">
+            <div class="icon" onclick="showCoopExp();" onmouseover="showCoopExp();">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+            <div class="icon" onclick="showWorkExp();" onmouseover="showWorkExp();">
+              <i class="bi bi-briefcase"></i>
+            </div>
           </div>
-          <p class="title">About Me</p>
-          <p class="text">
-            I am a new developer based in <b>Vancouver, BC</b> with a future in building websites, applications, and everything in between. 
-            I graduated from <b>Douglas College's Computing System & Information Systems</b> in August 2022 and have strong interest in excelling 
-            in <b>Web Development</b> first, and then make my way through the different types of developers throughout my career.
-          </p>
+          <div class="text-exp">
+            <p id="exp-title">Experiences</p>
+            <p id="title" class="title"></p>
+            <p id="textbox"></p> 
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contacts -->
-    <!-- <section id="contacts" class="contacts">
-      <div class="container">
-        <div class="row text-center">
-          <h4 class="fw-bold lead mb-3">Contact Links</h4>
-          <div class="heading-line"></div>
-        </div>
-      </div> -->
-      <!-- Contacts Links -->
-      <!-- <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="contacts__links-box"><img src="images/arts/github.png" alt="github" title="github" class="img-fluid"></div>
-          </div>
-          <div class="col-md-4">
-            <div class="contacts__links-box"><img src="images/arts/linkedin.png" alt="linkedin" title="linkedin" class="img-fluid"></div>
-          </div>
-          <div class="col-md-4">
-            <div class="contacts__links-box"><img src="images/arts/facebook.png" alt="facebook" title="facebook" class="img-fluid"></div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    <!-- Projects -->
+    <section id="projects" class="container">
+      <div id="proj-title">Projects</div>
+      <div id="proj-carousel" class="carousel slide" data-ride="carousel">
+        <!-- indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#proj-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#proj-carousel" data-slide-to="1"></li>
+          <li data-target="#proj-carousel" data-slide-to="2"></li>
+          <li data-target="#proj-carousel" data-slide-to="3"></li>
+          <li data-target="#proj-carousel" data-slide-to="4"></li>
+        </ol>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- wrapper -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <a href="https://github.com/mlnkng/tictacgo">
+              <div class="img"><img src="/images/tictacgo.png"></div>
+            </a>
+            <div class="carousel-caption">
+              <p>Game written in Go, with HTML and CSS</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="https://irvingtire.ca/">
+              <div class="img"><img src="/images/irvingtire.png"></div>
+            </a>
+            <div class="carousel-caption">
+              <p>Website built with CSS and HTML</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="https://github.com/mlnkng/W21G10_RecipeFinder">
+              <div class="img"><img src="/images/recipefinder.png"></div>
+            </a>
+            <div class="carousel-caption">
+              <p>Android app built using Java with MySQL</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="https://github.com/mlnkng/Mavericks_SuperHR-PayrollSystem">
+              <div class="img"><img src="/images/payroll.png"></div>
+            </a>
+            <div class="carousel-caption">
+              <p>Web app built with Java, using Spring Boot framework</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="https://github.com/mlnkng/CSIS3380_Project01">
+              <div class="img"><img src="/images/randomquotes.png" alt="">
+            </a>
+            <div class="carousel-caption">
+              <p>Web project built with CSS and JavaScript, using React framework</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- left & right arrows -->
+        <a class="left carousel-control" data-slide="prev" href="#proj-carousel">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-slide="next" href="#proj-carousel">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

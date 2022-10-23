@@ -2,11 +2,12 @@
 
 // Gradient mixin
 @mixin gradient {
-    background: linear-gradient(to right, rgba(#a690ff, 0.95), rgba(#ffd0ff, 0.95));
+    background: linear-gradient(to right, rgba($purple, 0.95), rgba(#ffd0ff, 0.95));
 }
 
 @mixin gradient-rev {
-    background: linear-gradient(to right, rgba(#ffd0ff, 0.95), rgba(#a690ff, 0.95));
+    background: linear-gradient(to right, rgba(#ffd0ff, 1), rgba($purple, 1));
+    opacity: 1;
 }
 
 // Absolute center

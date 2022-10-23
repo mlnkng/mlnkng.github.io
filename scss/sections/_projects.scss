@@ -1,2 +1,68 @@
 @use '../custom' as *;
+@use '../components/mixins' as *;
 
+#projects {
+    @include gradient-rev;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90% !important;
+
+    @include media-breakpoint-down(md) {
+        width: 90% !important;
+    }
+}
+
+#proj-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    color: $gray-100;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 15px;
+}
+
+#proj-carousel {
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    
+    .item {
+        height: 430px !important;
+
+        .carousel-caption {
+            padding: 10px 0;
+            display: block;
+            font-size: 2rem;
+            color: $gray-200;
+            font-weight: 800;
+            font-family: 'Ubuntu', sans-serif;
+            height: 100px;
+            width: fit-content;
+            text-align: center;
+        }
+    }
+}
+
+img {
+    border-radius: 10px;
+    width: 550px;
+}
+
+.carousel-control {
+    background-image: none !important;
+    height: 300px;
+    
+    &:hover.left .glyphicon {
+        color: $gray-200;
+    }
+    
+    &:hover.right .glyphicon {
+        color: $gray-200;
+    }
+}

@@ -1,5 +1,17 @@
 @use '../custom' as *;
 
+// chat icon
+i.bi {
+    font-size: 2rem;
+}
+
+// li icon
+i.bi-caret-right-fill {
+    font-size: 1rem;
+    color: $gray-500;
+    padding-right: 5px;
+}
+
 // Intro
 .display-2 {
     margin-bottom: 1rem;
@@ -12,12 +24,12 @@
     }
 
     &--description {
-        font-size: 1rem;
+        font-size: 1.5rem;
         display: block;
         margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
 
         @include media-breakpoint-up(lg) {
-            font-size: 1.4rem;
             display: inline-block;
         }
     }
@@ -33,7 +45,6 @@
     background-color: $primary;
 }
 
-
 .heading-line::after {
     content: "";
     width: 2rem;
@@ -48,41 +59,73 @@
 // About
 .title {
     display: inline-block;
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 2rem;
     font-family: 'Ubuntu', sans-serif;
+    text-transform: lowercase;
     color: $gray-100;
-    text-transform: uppercase;
 }
 
-.tech {
+.tech-card {
     padding-top: 1rem;
     text-align: center;
     color: $gray-500;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#tech-text {
+    font-family: 'Ubuntu', sans-serif;
+
+    ul > li {
+        font-family: 'Ubuntu', sans-serif;            
+    }
 }
 
 .text {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     display: block;
     margin-top: 1rem;
     color: $gray-100;
     padding: 15px;
     text-align: center;
+    font-family: 'Ubuntu', sans-serif;
 
     b {
         color: $gray-500;
         font-weight: 500;
+        font-family: 'Ubuntu', sans-serif;
     }
 
     li {
-        font-size: 0.4rem;
+        font-size: 1rem;
         position: relative;
         padding-left: 20px;
         color: $gray-100;
+        font-family: 'Ubuntu', sans-serif;
     }
 
     @include media-breakpoint-up(lg) {
-        font-size: 1.0rem;
+        font-size: 1.5rem;
         display: inline-block;
+    }
+}
+
+.text-exp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $gray-200;
+    font-family: 'Ubuntu', sans-serif;
+
+    ul {
+        display: block;
+        column-gap: 5rem;
+    }
+
+    li {
+        display: block;
+        position: relative;
+        font-family: 'Ubuntu', sans-serif;
     }
 }
