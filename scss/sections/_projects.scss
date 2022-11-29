@@ -2,19 +2,13 @@
 @use '../components/mixins' as *;
 
 #projects {
-    @include gradient-rev;
-    margin-bottom: 15px;
-    padding: 20px;
+    @include gradient;
     border-radius: 10px;
-    max-width: 90% !important;
-
-    @include media-breakpoint-down(md) {
-        width: 90% !important;
-    }
+    margin: 0 30px;
+    padding-top: 10px;
 }
 
 #proj-title {
-    font-family: 'Ubuntu', sans-serif;
     font-size: 2rem;
     color: $gray-100;
     text-transform: lowercase;
@@ -24,13 +18,12 @@
 
 #proj-carousel {
     border-radius: 10px;
-    margin-bottom: 25px;
+    @include centerDiv
 }
 
 .carousel-inner {
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
+    max-width: 550px;
     
     .item {
         height: 430px !important;
@@ -38,31 +31,31 @@
         .carousel-caption {
             padding: 10px 0;
             display: block;
-            font-size: 2rem;
-            color: $gray-200;
-            font-weight: 800;
-            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
             height: 100px;
-            width: fit-content;
             text-align: center;
+            text-transform: lowercase;
+            text-shadow: none !important;
         }
     }
 }
 
 img {
     border-radius: 10px;
-    width: 550px;
 }
 
 .carousel-control {
     background-image: none !important;
     height: 300px;
+    text-shadow: 4px 4px 0 $gray-400;
     
     &:hover.left .glyphicon {
         color: $gray-200;
+        text-shadow: 0 0 5px $gray-200;
     }
     
     &:hover.right .glyphicon {
         color: $gray-200;
+        text-shadow: 0 0 5px $gray-200;
     }
 }

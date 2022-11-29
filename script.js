@@ -64,78 +64,62 @@ function hideContacts() {
     var contactLinkLi = document.getElementById('contact-link-li');
     var contactLinkFb = document.getElementById('contact-link-fb');
 
-    contactBtn.style.cssText = `
-        width: 280px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-    `;
+    var width = $(window).width();
 
-    contactSpan.style.cssText = `
-        @include gradient-rev;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        line-height: 80px;
-        font-weight: 600;
-        font-size: 2rem;
-        transition: 0.4s linear;
-    `;
+    contactBtn.style.cssText = ``;
 
-    contactLinkGh.style.cssText = `
-        flex: 1;
-        font-size: 26px;
-        text-align: center;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: 0.3s linear;
-        color: #e9ecef;
-    `;
+    contactSpan.style.cssText = ``;
 
-    contactLinkLi.style.cssText = `
-        flex: 1;
-        font-size: 26px;
-        text-align: center;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: 0.3s linear;
-        color: #e9ecef;
-    `;
+    contactLinkGh.style.cssText = ``;
 
-    contactLinkFb.style.cssText = `
-        flex: 1;
-        font-size: 26px;
-        text-align: center;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: 0.3s linear;
-        color: #e9ecef;
-    `;
+    contactLinkLi.style.cssText = ``;
+
+    contactLinkFb.style.cssText = ``;
 }
 
 function showAbout(group) {
-    var ul = document.getElementById(group + "-ul");
     var text = document.getElementById(group + "-text");
-
-    if (ul) {
-        ul.style.display = "block";
-    }
-
-    if (text) {
-        text.style.cssText = `
-            display: block;
-            color: #e9ecef;
-            position: relative;
-            padding-left: 10px;
-        `;
-    }
-
-    document.getElementById(group + "-card").style.width = "175%";
+    var width = window.innerWidth;
+    var setWidth;
+    
     document.getElementById(group + "-title").style.display = "none";
+
+    if (width > 768) {
+        document.getElementById(group + "-card").style.width = "175%";
+        if (group == "about") {
+            text.style.cssText = `
+                display: block;
+                color: #e9ecef;
+                position: relative;
+                padding-left: 10px;
+                width: 50vw;
+            `;
+        } else {
+            text.style.cssText = `
+                display: block;
+                color: #e9ecef;
+                position: relative;
+                padding-left: 10px;
+            `;
+        }
+    } else {
+        if (group == "about") {
+            text.style.cssText = `
+                display: block;
+                color: #e9ecef;
+                position: relative;
+                padding-left: 10px;
+                width: 80vw;
+            `;
+        } else {
+            text.style.cssText = `
+                display: block;
+                color: #e9ecef;
+                position: relative;
+                padding-left: 10px;
+            `;
+        }
+    }
 
     document.getElementById(group + "-icon").style.cssText = `
         width: 40px;
@@ -148,12 +132,7 @@ function showAbout(group) {
 }
 
 function hideAbout(group) {
-    var ul = document.getElementById(group + "-ul");
     var text = document.getElementById(group + "-text");
-
-    if (ul) {
-        ul.style.display = "none";
-    }
 
     if (text) {
         text.style.display = "none";
@@ -162,21 +141,7 @@ function hideAbout(group) {
     document.getElementById(group + "-card").style.width = "100%";
     document.getElementById(group + "-title").style.display = "block";
 
-    document.getElementById(group + "-icon").style.cssText = `
-        margin: 0 auto;
-        width: 100%;
-        height: 80px;
-        max-width: 80px;
-        background: linear-gradient(90deg, #bcacff 0%,  #af9aff 40%, rgba(0, 0, 0, 0.28) 60%);
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        transition: all 1s ease;
-        background-position: 0px;
-        background-size: 200px;
-    `;
+    document.getElementById(group + "-icon").style.cssText = ``;
 }
 
 function showCoopExp() {
@@ -190,7 +155,6 @@ function showCoopExp() {
     title.innerHTML = "DEPLOYMENT & TECHNICAL SUPPORT | Artefactual Systems Inc."
     title.style.cssText = `
         text-transform: capitalize;
-        font-size: 2rem;
         display: inline-block;
         width: 130%;
     `
@@ -208,7 +172,6 @@ function showWorkExp() {
     title.innerHTML = "JR DEVELOPER | Artefactual Systems Inc.";
     title.style.cssText = `
         text-transform: capitalize;
-        font-size: 2rem;
         display: inline-block;
         width: 130%;
     `

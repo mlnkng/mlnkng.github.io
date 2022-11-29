@@ -66,61 +66,64 @@
       </div>
     </section>
 
+    <!-- divider -->
+    <div class="container">
+      <div class="row text-center mt-5">
+        <hq class="display-3 fw-bold text-capitalize">
+          <div class="start-divider">
+            <p class="lead" style="margin-bottom: 0.5rem;"></p>
+          </div>
+        </hq>
+      </div>
+    </div>
+
     <!-- About -->
     <section id="about" class="about">
-      <!-- Divider -->
-      <div class="container">
-        <div class="row text-center mt-5">
-          <hq class="display-3 fw-bold text-capitalize">
-            <div class="heading-line">
-              <p class="lead" style="margin-bottom: 0.5rem;"></p>
-            </div>
-          </hq>
-        </div>
-      </div>
     
       <!-- cards -->
       <div class="cards">
         <!-- about -->
         <div id="about-card" class="card" onmouseover="showAbout('about')" onmouseout="hideAbout('about')">
-          <div id="about-icon">
+          <div id="about-icon" class="icons">
             <i class="bi bi-info-square"></i>
           </div>
           <p id="about-title" class="title">About Me</p>
           <p id="about-text" class="text">
             I am a new developer based in <b>Vancouver, BC</b> with a future in building websites, applications, and everything in between. 
-            I graduated from <b>Douglas College's Computing System & Information Systems</b> in August 2022 and have strong interest in excelling 
+            I graduated from Douglas College's <b>Computing System & Information Systems</b> in August 2022 and have strong interest in excelling 
             in <b>Web Development</b> first, and then make my way through the different types of developers throughout my career.
           </p>
         </div>
     
         <!-- technologies -->
         <div id="tech-card" class="card" onmouseover="showAbout('tech')" onmouseout="hideAbout('tech')">
-          <div id="tech-icon">
+          <div id="tech-icon" class="icons">
             <i class="bi bi-code-slash"></i>
           </div>
-          <p id="tech-title" class="title">Technologies</p>        
-          <span id="tech-text">Technologies I have worked with:</span>
-          <ul id="tech-ul">
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>HTML/CSS/JS</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Bootstrap</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>React.js</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Node.js</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Java</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Python</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Go</li>
-            <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Ubuntu</li>
-          </ul>
+          <p id="tech-title" class="title">Technologies</p>      
+          <div id="tech-text" class="text">  
+            <p class="tech-tit">Technologies I have worked with:</p>
+            <ul id="tech-ul">
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>HTML/CSS/JS</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Bootstrap</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>React.js</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Node.js</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Java</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Python</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Go</li>
+              <li id="tech-li"><i class="bi bi-caret-right-fill"></i>Ubuntu</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="cards card3">       
         <!-- experiences -->
         <div class="card-exp" onmouseleave="hideExp()">
-          <div class="icons">
-            <div class="icon" onclick="showCoopExp();" onmouseover="showCoopExp();">
+          <div class="exp-icons icons">
+            <div class="exp-icon icons" onclick="showCoopExp();" onmouseover="showCoopExp();">
               <i class="bi bi-mortarboard"></i>
             </div>
-            <div class="icon" onclick="showWorkExp();" onmouseover="showWorkExp();">
+            <div class="exp-icon icons" onclick="showWorkExp();" onmouseover="showWorkExp();">
               <i class="bi bi-briefcase"></i>
             </div>
           </div>
@@ -133,78 +136,113 @@
       </div>
     </section>
 
+    <!-- divider -->
+    <div class="container">
+      <div class="row text-center">
+        <hq class="display-3 fw-bold text-capitalize">
+          <div class="divider">
+            <div class="start-divider">
+              <p class="lead" style="margin-bottom: 0.5rem;"></p>
+            </div>
+          </div>
+        </hq>
+      </div>
+    </div>
+
     <!-- Projects -->
-    <section id="projects" class="container">
-      <div id="proj-title">Projects</div>
-      <div id="proj-carousel" class="carousel slide" data-ride="carousel">
-        <!-- indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#proj-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#proj-carousel" data-slide-to="1"></li>
-          <li data-target="#proj-carousel" data-slide-to="2"></li>
-          <li data-target="#proj-carousel" data-slide-to="3"></li>
-          <li data-target="#proj-carousel" data-slide-to="4"></li>
-        </ol>
+    <section id="projects" class="projects">
+      <div class="proj-cont">
+        <div id="proj-title">Projects</div>
+        <div id="proj-carousel" class="carousel slide" data-ride="carousel">
+          <!-- indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#proj-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#proj-carousel" data-slide-to="1"></li>
+            <li data-target="#proj-carousel" data-slide-to="2"></li>
+            <li data-target="#proj-carousel" data-slide-to="3"></li>
+            <li data-target="#proj-carousel" data-slide-to="4"></li>
+          </ol>
 
-        <!-- wrapper -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <a href="https://github.com/mlnkng/tictacgo">
-              <div class="img"><img src="/images/tictacgo.png"></div>
-            </a>
-            <div class="carousel-caption">
-              <p>Game written in Go, with HTML and CSS</p>
+          <!-- wrapper -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="https://github.com/mlnkng/tictacgo">
+                <div class="img"><img src="/images/tictacgo.png"></div>
+              </a>
+              <div class="carousel-caption">
+                <p>Game written in Go, with HTML and CSS</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <a href="https://irvingtire.ca/">
+                <div class="img"><img src="/images/irvingtire.png"></div>
+              </a>
+              <div class="carousel-caption">
+                <p>Website built with CSS and HTML</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <a href="https://github.com/mlnkng/W21G10_RecipeFinder">
+                <div class="img"><img src="/images/recipefinder.png"></div>
+              </a>
+              <div class="carousel-caption">
+                <p>Android app built using Java with MySQL</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <a href="https://github.com/mlnkng/Mavericks_SuperHR-PayrollSystem">
+                <div class="img"><img src="/images/payroll.png"></div>
+              </a>
+              <div class="carousel-caption">
+                <p>Web app built with Java, using Spring Boot framework</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <a href="https://github.com/mlnkng/CSIS3380_Project01">
+                <div class="img"><img src="/images/randomquotes.png" alt="">
+              </a>
+              <div class="carousel-caption">
+                <p>Web project built with CSS and JavaScript, using React framework</p>
+              </div>
             </div>
           </div>
 
-          <div class="item">
-            <a href="https://irvingtire.ca/">
-              <div class="img"><img src="/images/irvingtire.png"></div>
-            </a>
-            <div class="carousel-caption">
-              <p>Website built with CSS and HTML</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <a href="https://github.com/mlnkng/W21G10_RecipeFinder">
-              <div class="img"><img src="/images/recipefinder.png"></div>
-            </a>
-            <div class="carousel-caption">
-              <p>Android app built using Java with MySQL</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <a href="https://github.com/mlnkng/Mavericks_SuperHR-PayrollSystem">
-              <div class="img"><img src="/images/payroll.png"></div>
-            </a>
-            <div class="carousel-caption">
-              <p>Web app built with Java, using Spring Boot framework</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <a href="https://github.com/mlnkng/CSIS3380_Project01">
-              <div class="img"><img src="/images/randomquotes.png" alt="">
-            </a>
-            <div class="carousel-caption">
-              <p>Web project built with CSS and JavaScript, using React framework</p>
-            </div>
-          </div>
+          <!-- left & right arrows -->
+          <a class="left carousel-control" data-slide="prev" href="#proj-carousel">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" data-slide="next" href="#proj-carousel">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <!-- left & right arrows -->
-        <a class="left carousel-control" data-slide="prev" href="#proj-carousel">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" data-slide="next" href="#proj-carousel">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </section>
+
+    <!-- divider -->
+    <div class="container">
+      <div class="row text-center">
+        <hq class="display-3 fw-bold text-capitalize">
+          <div class="end-divider">
+            <p class="lead" style="margin-bottom: 0.5rem;"></p>
+          </div>
+        </hq>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="contact-icons">
+        <a id="contact-link-gh" class="footer-icons icon" href="https://github.com/mlnkng"><i class="fab fa-github"></i></a>              
+        <a id="contact-link-li" class="footer-icons icon" href="https://www.linkedin.com/in/mlnkng/"><i class="fab fa-linkedin"></i></a>              
+        <a id="contact-link-fb" class="footer-icons icon" href="https://www.facebook.com/mlnkng/"><i class="fab fa-facebook"></i></a>
+      </div>
+      <p id="copyright">&#169 designed and built by mel</p>
+    </footer>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

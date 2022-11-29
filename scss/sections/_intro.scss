@@ -5,10 +5,9 @@
     @include gradient;
     padding: 5rem;
     width: 100%;
-    max-height: 600px;
 
     @include media-breakpoint-down(md) {
-        height: 80%;
+        max-height: fit-content;
     }
 }
 
@@ -22,12 +21,6 @@
         background-image: url('../../images/arts/me-cartoon.png');
         filter: blur(1px);
         background-size: contain;
-
-        &:hover {
-            background-image: url('../../images/arts/me-normal.png');
-            filter: opacity(0.9);
-            transition: 0.5s;
-        }
 
         @include media-breakpoint-down(md) {
             display: none;

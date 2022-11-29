@@ -15,12 +15,10 @@ i.bi-caret-right-fill {
 // Intro
 .display-2 {
     margin-bottom: 1rem;
-    font-family: 'Ubuntu', sans-serif;
 
     &--intro {
         display: inline-block;
         font-weight: 500;
-        font-family: 'Ubuntu', sans-serif;
     }
 
     &--description {
@@ -36,7 +34,7 @@ i.bi-caret-right-fill {
 }
 
 // Heading line
-.heading-line::before {
+.start-divider::before {
     content: "";
     width: 10rem;
     height: 0.1rem;
@@ -45,7 +43,7 @@ i.bi-caret-right-fill {
     background-color: $primary;
 }
 
-.heading-line::after {
+.start-divider::after {
     content: "";
     width: 2rem;
     height: 0.2rem;
@@ -56,12 +54,54 @@ i.bi-caret-right-fill {
     background-color: $primary;
 }
 
+// Ending line
+.end-divider::before {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    padding-top: 0.5rem;
+    margin: 0 auto;
+    margin-top: 2rem !important;
+    display: block;
+    background-color: $primary;
+}
+
+.end-divider::after {
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary;
+    margin-bottom: 2rem;
+}
+
+// 3 tiered divider
+.divider::before {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    padding-top: 0.5rem;
+    margin: 15px auto 5px;
+    display: block;
+    background-color: $primary;
+}
+
+.divider::after {
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $gray-200;
+    margin-bottom: 1rem;
+}
+
 // About
 .title {
     display: inline-block;
     font-weight: 400;
     font-size: 2rem;
-    font-family: 'Ubuntu', sans-serif;
     text-transform: lowercase;
     color: $gray-100;
 }
@@ -70,15 +110,6 @@ i.bi-caret-right-fill {
     padding-top: 1rem;
     text-align: center;
     color: $gray-500;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-#tech-text {
-    font-family: 'Ubuntu', sans-serif;
-
-    ul > li {
-        font-family: 'Ubuntu', sans-serif;            
-    }
 }
 
 .text {
@@ -88,12 +119,10 @@ i.bi-caret-right-fill {
     color: $gray-100;
     padding: 15px;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
 
     b {
         color: $gray-500;
         font-weight: 500;
-        font-family: 'Ubuntu', sans-serif;
     }
 
     li {
@@ -101,7 +130,6 @@ i.bi-caret-right-fill {
         position: relative;
         padding-left: 20px;
         color: $gray-100;
-        font-family: 'Ubuntu', sans-serif;
     }
 
     @include media-breakpoint-up(lg) {
@@ -115,8 +143,6 @@ i.bi-caret-right-fill {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $gray-200;
-    font-family: 'Ubuntu', sans-serif;
 
     ul {
         display: block;
@@ -126,6 +152,13 @@ i.bi-caret-right-fill {
     li {
         display: block;
         position: relative;
-        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
+.icon {
+    color: $gray-200;
+
+    &:hover {
+        color: $gray-200;
     }
 }

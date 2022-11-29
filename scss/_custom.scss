@@ -22,6 +22,8 @@ $secondary: $pink;
 
 body {
     background-color: $gray-200 !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    color: $gray-200 !important;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

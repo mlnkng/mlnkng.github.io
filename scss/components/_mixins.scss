@@ -6,7 +6,7 @@
 }
 
 @mixin gradient-rev {
-    background: linear-gradient(to right, rgba(#ffd0ff, 1), rgba($purple, 1));
+    background: linear-gradient(to right, rgba(#ffd0ff, 0.95), rgba($purple, 0.95));
     opacity: 1;
 }
 
@@ -16,4 +16,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@mixin centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
