@@ -1,7 +1,7 @@
 // theme colors
 $pink:    #ffd0ff;
 $purple:  #d7c1ff;
-$purple-dark: #af9aff;
+$purple-dark: #c5b6ff;
 $purple-hover: #cbafff;
 
 // white and gray colors
@@ -22,6 +22,8 @@ $secondary: $pink;
 
 body {
     background-color: $gray-200 !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    color: $gray-200 !important;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
