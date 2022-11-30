@@ -79,8 +79,8 @@ function hideContacts() {
 
 function showAbout(group) {
     var text = document.getElementById(group + "-text");
+    var icon = document.getElementById(group + "-icon");
     var width = window.innerWidth;
-    var setWidth;
     
     document.getElementById(group + "-title").style.display = "none";
 
@@ -121,14 +121,20 @@ function showAbout(group) {
         }
     }
 
-    document.getElementById(group + "-icon").style.cssText = `
-        width: 40px;
-        height: 40px;
-        transition: all 0.1s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `;
+    if (width < 400) {
+        icon.style.cssText = `
+            display: none;
+        `;
+    } else {
+        icon.style.cssText = `
+            width: 40px;
+            height: 40px;
+            transition: all 0.1s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        `;
+    }
 }
 
 function hideAbout(group) {
@@ -147,7 +153,8 @@ function hideAbout(group) {
 function showCoopExp() {
     var expTitle = document.getElementById('exp-title');
     var title = document.getElementById('title');  
-    var textBox = document.getElementById('textbox');  
+    var textBox = document.getElementById('textbox');
+    var width = window.innerWidth;
     var coopText = "MAY 2021 - DEC 2021 [CO-OP]<br/><ul><li><i class='bi bi-caret-right-fill'></i>deploy & upgrade client servers</li><li><i class='bi bi-caret-right-fill'></i>troubleshooting</li><li><i class='bi bi-caret-right-fill'></i>domain names configuration</li></ul>";      
 
     expTitle.style.display = "none";
@@ -159,12 +166,18 @@ function showCoopExp() {
         width: 130%;
     `
     textBox.innerHTML = coopText;
+
+    if (width < 400) {
+        document.getElementById('exp-icons').style.display = "none";
+        document.getElementById('text-exp').style.cssText = `left: 45% !important`;
+    }
 }
 
 function showWorkExp() {
     var expTitle = document.getElementById('exp-title');
     var title = document.getElementById('title');  
     var textBox = document.getElementById('textbox');
+    var width = window.innerWidth;
     var workText = "JAN 2022 - PRESENT<br/><ul><li><i class='bi bi-caret-right-fill'></i>front-end web development</li><li><i class='bi bi-caret-right-fill'></i>data migration</li><li><i class='bi bi-caret-right-fill'></i>bug fixes</li></ul>";
 
     expTitle.style.display = "none";
@@ -177,6 +190,11 @@ function showWorkExp() {
     `
     
     textBox.innerHTML = workText;
+
+    if (width < 400) {
+        document.getElementById('exp-icons').style.display = "none";
+        document.getElementById('text-exp').style.cssText = `left: 45% !important`;
+    }
 }
 
 function hideExp() {
@@ -187,4 +205,7 @@ function hideExp() {
     expTitle.style.display = "inline-block";
     title.style.display = "none";
     textBox.style.display = "none";
+
+    document.getElementById('exp-icons').style.display = "block";
+    document.getElementById('text-exp').style.cssText = ``;
 }

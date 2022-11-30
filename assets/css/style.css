@@ -11059,6 +11059,9 @@ footer #copyright {
 
 .menu {
   background: linear-gradient(to right, #c5b6ff, #ffd0ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -11067,8 +11070,20 @@ footer #copyright {
 }
 .navbar .navbar-brand {
   float: left;
-  height: unset;
+  height: 100px;
   padding: 10px 15px !important;
+}
+.navbar .navbar-brand img {
+  position: unset !important;
+}
+@media screen and (max-width: 425px) {
+  .navbar .navbar-brand img {
+    position: absolute !important;
+    left: 50%;
+    margin-left: -50px !important;
+    top: 15px;
+    display: block;
+  }
 }
 .navbar .navbar-brand .logo {
   padding-left: 100%;
@@ -11217,7 +11232,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
 }
 .card #about-text, .card #tech-text {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .card .tech-tit {
   text-align: center;
@@ -11239,7 +11254,6 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
 
 .card-exp {
   width: 100%;
-  min-width: 200px;
   height: 250px;
   background-color: #d7c1ff;
   border-radius: 10px;
@@ -11261,6 +11275,11 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
 .card-exp .exp-icons .exp-icon:hover {
   box-shadow: 0px 0px 5px 5px #e9ecef;
 }
+@media screen and (max-width: 425px) {
+  .card-exp .exp-icons {
+    padding-top: 40px;
+  }
+}
 .card-exp #exp-title {
   font-size: 2rem;
   font-weight: 400;
@@ -11276,7 +11295,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
     font-size: 1.5rem !important;
   }
   .card-exp .text-exp {
-    left: 55% !important;
+    left: 55%;
   }
 }
 
@@ -11286,21 +11305,31 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  height: 80px;
   max-width: 80px;
+  height: 80px;
   background: linear-gradient(90deg, #bcacff 0%, #af9aff 40%, rgba(0, 0, 0, 0.28) 60%);
   border-radius: 100%;
   transition: all 1s ease;
   background-position: 0px;
   background-size: 200px;
 }
+@media screen and (max-width: 425px) {
+  #about-icon, #tech-icon, #coop-icon, #exp-icon, .exp-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 #projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to right, #ffd0ff, #c5b6ff);
   opacity: 1;
   border-radius: 10px;
   margin: 0 30px;
   padding-top: 10px;
+  overflow: hidden;
 }
 
 #proj-title {
@@ -11313,9 +11342,11 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
 
 #proj-carousel {
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+@media screen and (max-width: 425px) {
+  #proj-carousel {
+    max-height: 250px;
+  }
 }
 
 .carousel-inner {
@@ -11324,6 +11355,7 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
 }
 .carousel-inner .item {
   height: 430px !important;
+  max-height: fit-content;
 }
 .carousel-inner .item .carousel-caption {
   padding: 10px 0;
@@ -11334,9 +11366,20 @@ nav .start-contact, a:nth-child(3):hover ~ .animation {
   text-transform: lowercase;
   text-shadow: none !important;
 }
+@media screen and (max-width: 425px) {
+  .carousel-inner .item .carousel-caption {
+    display: none;
+  }
+}
 
 img {
   border-radius: 10px;
+}
+@media screen and (max-width: 425px) {
+  img {
+    max-width: 300px;
+    max-height: fit-content;
+  }
 }
 
 .carousel-control {
@@ -11351,6 +11394,11 @@ img {
 .carousel-control:hover.right .glyphicon {
   color: #e9ecef;
   text-shadow: 0 0 5px #e9ecef;
+}
+@media screen and (max-width: 425px) {
+  .carousel-control {
+    height: 150px;
+  }
 }
 
 .contacts {

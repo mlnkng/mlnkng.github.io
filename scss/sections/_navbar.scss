@@ -3,6 +3,10 @@
 
 .menu {
     @include gradient;
+
+    @include media-breakpoint-down(xs) {
+        @include centerDiv;
+    }
 }
 
 .navbar {
@@ -11,8 +15,20 @@
 
     .navbar-brand {
         float: left;
-        height: unset;
+        height: 100px;
         padding: 10px 15px !important;
+
+        img {
+            position: unset !important;
+
+            @media screen and (max-width: 425px) {
+                position: absolute !important;
+                left: 50%;
+                margin-left: -50px !important;
+                top: 15px;
+                display: block;    
+            }
+        }
 
         .logo {
             padding-left: 100%;

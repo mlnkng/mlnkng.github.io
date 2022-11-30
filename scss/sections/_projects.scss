@@ -2,10 +2,12 @@
 @use '../components/mixins' as *;
 
 #projects {
+    @include centerDiv;
     @include gradient-rev;
     border-radius: 10px;
     margin: 0 30px;
     padding-top: 10px;
+    overflow: hidden;
 }
 
 #proj-title {
@@ -18,7 +20,10 @@
 
 #proj-carousel {
     border-radius: 10px;
-    @include centerDiv
+
+    @media screen and (max-width: 425px) {
+        max-height: 250px;
+    }
 }
 
 .carousel-inner {
@@ -27,6 +32,7 @@
     
     .item {
         height: 430px !important;
+        max-height: fit-content;
 
         .carousel-caption {
             padding: 10px 0;
@@ -36,12 +42,21 @@
             text-align: center;
             text-transform: lowercase;
             text-shadow: none !important;
+
+            @media screen and (max-width: 425px) {
+                display: none;
+            }
         }
     }
 }
 
 img {
     border-radius: 10px;
+
+    @media screen and (max-width: 425px) {
+        max-width: 300px;
+        max-height: fit-content;
+    }
 }
 
 .carousel-control {
@@ -57,5 +72,9 @@ img {
     &:hover.right .glyphicon {
         color: $gray-200;
         text-shadow: 0 0 5px $gray-200;
+    }
+
+    @media screen and (max-width: 425px) {
+        height: 150px;
     }
 }
